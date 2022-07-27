@@ -14,13 +14,13 @@ abstract class ParentOverride {
         log.info("parent");
     }
 
-    public abstract void print2();
+    public abstract void print2() throws Exception;
 }
 
 @Log4j2
 class ChildOverride extends ParentOverride {
     @Override
-    public void print() {
+    public void print()  {
         log.info("parent");
     }
 
@@ -28,7 +28,7 @@ class ChildOverride extends ParentOverride {
      *
      */
     @Override
-    public void print2() {
+    public void print2() throws RuntimeException {
 
     }
 
