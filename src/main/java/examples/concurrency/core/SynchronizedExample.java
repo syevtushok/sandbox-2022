@@ -3,6 +3,8 @@ package examples.concurrency.core;
 public class SynchronizedExample {
     private int sum;
 
+
+
     public void calculate() {
         setSum(getSum() + 1);
     }
