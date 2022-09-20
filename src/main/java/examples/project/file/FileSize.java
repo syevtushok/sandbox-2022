@@ -22,6 +22,7 @@ public class FileSize {
         ObjectMapper objectMapper = new ObjectMapper();
         PhotoDto photoDto = objectMapper.readValue(response.body(), PhotoDto.class);
         int maxSize = 0;
+
         Photo maxPhoto = photoDto.getPhotos().get(0);
         for (Photo photo : photoDto.getPhotos()) {
             String imgSrc = photo.getImgSrc().replace("http", "https").replace(".jpl", "");

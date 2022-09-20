@@ -10,11 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/greeting")
 public class GreetingServlet extends HttpServlet {
-    /**
-     * @param req
-     * @param resp
-     * @throws IOException
-     */
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String name = Optional.ofNullable(req.getParameter("name")).orElse("stranger");
